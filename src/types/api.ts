@@ -1,5 +1,5 @@
 export interface ErrorRateResponse {
-  metric: "errorRate";
+  metric: 'errorRate';
   points: {
     timestamp: string;
     value: number;
@@ -7,7 +7,7 @@ export interface ErrorRateResponse {
 }
 
 export interface ResponseTimeResponse {
-  metric: "responseTime";
+  metric: 'responseTime';
   items: {
     timeLabel: string;
     avgMs: number;

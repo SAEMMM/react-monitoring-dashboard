@@ -1,4 +1,4 @@
-import type { ChartSeries, LineChartModel } from "../types/chart";
+import type { ChartSeries, LineChartModel } from '../types/chart';
 
 export const buildLineChartModel = (series: ChartSeries[]): LineChartModel => {
   return {

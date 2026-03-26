@@ -1,24 +1,24 @@
 import {
   Chart as ChartJS,
-  LineElement,
   CategoryScale,
+  Legend,
+  LineElement,
   LinearScale,
   PointElement,
   Tooltip,
-  Legend,
   type ChartOptions,
-} from "chart.js";
-import { Line } from "react-chartjs-2";
-import type { LineChartModel } from "../../types/chart";
-import { toChartJsLineData } from "../../adapters/toChartJsLineData";
+} from 'chart.js';
+import { Line } from 'react-chartjs-2';
+import type { LineChartModel } from '../../types/chart';
+import { toChartJsLineData } from '../../adapters/toChartJsLineData';
 
 ChartJS.register(
-  LineElement,
   CategoryScale,
   LinearScale,
   PointElement,
+  LineElement,
   Tooltip,
-  Legend,
+  Legend
 );
 
 interface Props {
@@ -29,15 +29,15 @@ interface Props {
 export function BaseLineChart({ model, yAxisTitle }: Props) {
   const data = toChartJsLineData(model);
 
-  const options: ChartOptions<"line"> = {
+  const options: ChartOptions<'line'> = {
     responsive: true,
     interaction: {
-      mode: "index",
+      mode: 'index',
       intersect: false,
     },
     plugins: {
       legend: {
-        position: "top",
+        position: 'top',
       },
     },
     scales: {

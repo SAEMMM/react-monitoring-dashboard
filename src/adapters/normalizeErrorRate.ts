@@ -1,5 +1,5 @@
-import type { ChartSeries } from "../types/chart";
-import type { ErrorRateResponse } from "../types/api";
+import type { ChartSeries } from '../types/chart';
+import type { ErrorRateResponse } from '../types/api';
 
 interface Params {
   response: ErrorRateResponse;
@@ -10,8 +10,8 @@ interface Params {
 
 export const normalizeErrorRate = ({
   response,
-  id = "error-rate",
-  label = "Error Rate (%)",
+  id = 'error-rate',
+  label = 'Error Rate (%)',
   color,
 }: Params): ChartSeries => {
   return {

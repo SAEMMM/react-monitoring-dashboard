@@ -1,5 +1,5 @@
-import type { ChartSeries } from "../types/chart";
-import type { ResponseTimeResponse } from "../types/api";
+import type { ChartSeries } from '../types/chart';
+import type { ResponseTimeResponse } from '../types/api';
 
 interface Params {
   response: ResponseTimeResponse;
@@ -10,8 +10,8 @@ interface Params {
 
 export const normalizeResponseTime = ({
   response,
-  id = "response-time",
-  label = "Response Time (ms)",
+  id = 'response-time',
+  label = 'Response Time (ms)',
   color,
 }: Params): ChartSeries => {
   return {

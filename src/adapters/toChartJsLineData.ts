@@ -1,7 +1,9 @@
-import type { ChartData } from "chart.js";
-import type { LineChartModel } from "../types/chart";
+import type { ChartData } from 'chart.js';
+import type { LineChartModel } from '../types/chart';
 
-export const toChartJsLineData = (model: LineChartModel): ChartData<"line"> => {
+export const toChartJsLineData = (
+  model: LineChartModel
+): ChartData<'line'> => {
   return {
     labels: model.labels,
     datasets: model.series.map((series) => ({
