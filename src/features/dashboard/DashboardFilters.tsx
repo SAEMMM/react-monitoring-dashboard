@@ -1,7 +1,17 @@
-import type { AppType, DashboardFilter, DateRange } from '../../types/dashboard';
-import { FormControl, InputLabel, MenuItem, Select, Stack } from '@mui/material';
+import type {
+  AppType,
+  DashboardFilter,
+  DateRange,
+} from "../../types/dashboard";
+import {
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  Stack,
+} from "@mui/material";
 
-import type { SelectChangeEvent } from '@mui/material/Select';
+import type { SelectChangeEvent } from "@mui/material/Select";
 
 interface Props {
   filters: DashboardFilter;
@@ -9,8 +19,12 @@ interface Props {
   onChangeDateRange: (value: DateRange) => void;
 }
 
-const appTypeOptions: AppType[] = ['Web', 'Android', 'iOS'];
-const dateRangeOptions: DateRange[] = ['Last 24 hours', 'Last 7 days', 'Last 30 days'];
+const appTypeOptions: AppType[] = ["All", "Web", "Android", "iOS"];
+const dateRangeOptions: DateRange[] = [
+  "Last 24 hours",
+  "Last 7 days",
+  "Last 30 days",
+];
 
 export function DashboardFilters({
   filters,
@@ -26,7 +40,7 @@ export function DashboardFilters({
   };
 
   return (
-    <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
+    <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
       <FormControl size="small" sx={{ minWidth: 160 }}>
         <InputLabel id="app-type-label">App Type</InputLabel>
         <Select<AppType>
@@ -37,7 +51,7 @@ export function DashboardFilters({
         >
           {appTypeOptions.map((option) => (
             <MenuItem key={option} value={option}>
-              {option}
+              {option === "All" ? "전체" : option}
             </MenuItem>
           ))}
         </Select>

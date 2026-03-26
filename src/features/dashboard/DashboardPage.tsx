@@ -9,7 +9,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 
 const initialFilters: DashboardFilter = {
-  appType: 'Web',
+  appType: 'All',
   dateRange: 'Last 7 days',
 };
 
@@ -80,7 +80,7 @@ export function DashboardPage() {
         {isFetching ? (
           <Skeleton variant="rounded" height={320} />
         ) : (
-          <ErrorTrendChart data={data.trend} />
+          <ErrorTrendChart data={data.trend} trendSeries={data.trendSeries} />
         )}
       </Box>
     </Stack>
